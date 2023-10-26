@@ -7,7 +7,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 RUN pip install --no-cache-dir --upgrade pip \
-  && pip install --no-cache-dir -r conf/requirements.txt
+  && pip install --no-cache-dir -r requirements.txt
 
 RUN echo 'import os' > config.py
 RUN echo 'token_telegram = os.environ["TOKEN_TELEGRAM"]' >> config.py

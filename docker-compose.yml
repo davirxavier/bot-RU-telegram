@@ -8,7 +8,7 @@ services:
     pull_policy: build
     build:
       dockerfile: Dockerfile
-      context: .
+      context: docker
     volumes:
       - ${VOLUME_PATH}:/usr/src/app/salvo:z
     environment:
