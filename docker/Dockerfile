@@ -4,10 +4,10 @@ RUN apt-get update && apt-get install -y snap firefox-esr wget bzip2 libxtst6 li
 
 WORKDIR /usr/src/app
 
-COPY . .
+COPY ../. .
 
 RUN pip install --no-cache-dir --upgrade pip \
-  && pip install --no-cache-dir -r requirements.txt
+  && pip install --no-cache-dir -r conf/requirements.txt
 
 RUN echo 'import os' > config.py
 RUN echo 'token_telegram = os.environ["TOKEN_TELEGRAM"]' >> config.py
